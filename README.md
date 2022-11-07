@@ -18,7 +18,7 @@ aws dynamodb create-table \
         ReadCapacityUnits=10,WriteCapacityUnits=5
 ```
 
-![Tabela Criada](imagens/tabelaMusic.png)
+![Tabela Criada](imagens/tabelaMusic.PNG)
 
 ## Inserindo um item à tabela Music
 
@@ -28,7 +28,7 @@ aws dynamodb put-item \
     --item file://itemmusic.json \
 ```
 
-![Item inserido](imagens/itemInserido.png)
+![Item inserido](imagens/itemInserido.PNG)
 
 ## Inserção de múltiplos itens na tabela Music
 
@@ -37,7 +37,7 @@ aws dynamodb batch-write-item \
     --request-items file://batchmusic.json
 ```
 
-![Multiplos itens inseridos](imagens/itensInseridos.png)
+![Multiplos itens inseridos](imagens/itensInseridos.PNG)
 
 ## Criação de um index global secundário baseado no título do álbum
 
@@ -50,7 +50,7 @@ aws dynamodb update-table \
         \"ProvisionedThroughput\": {\"ReadCapacityUnits\": 10, \"WriteCapacityUnits\": 5      },\"Projection\":{\"ProjectionType\":\"ALL\"}}}]"
 ```
 
-![Index albumTitle](imagens/indexAlbumTitle.png)
+![Index albumTitle](imagens/indexAlbumTitle.PNG)
 
 ## Criação de um index global secundário baseado no nome do artista e no título do álbum
 
@@ -65,7 +65,7 @@ aws dynamodb update-table \
         \"ProvisionedThroughput\": {\"ReadCapacityUnits\": 10, \"WriteCapacityUnits\": 5      },\"Projection\":{\"ProjectionType\":\"ALL\"}}}]"
 ```
 
-![Index ArtistAlbumTitle](imagens/indexArtistAlbumTitle.png)
+![Index ArtistAlbumTitle](imagens/indexArtistAlbumTitle.PNG)
 
 ## Criação de um index global secundário baseado no título da música e no ano
 
@@ -80,4 +80,4 @@ aws dynamodb update-table \
         \"ProvisionedThroughput\": {\"ReadCapacityUnits\": 10, \"WriteCapacityUnits\": 5      },\"Projection\":{\"ProjectionType\":\"ALL\"}}}]"
 ```
 
-![Index SongTitleYear](imagens/indexSongTitleYear.png)
+![Index SongTitleYear](imagens/indexSongTitleYear.PNG)
